@@ -1,0 +1,377 @@
+<html>
+        <head>
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <style>
+               
+               @font-face {
+        font-family: 'QuicksandBook';
+        src: url('fonts/Quicksand_Book-webfont.eot');
+        src: url('fonts/Quicksand_Book-webfont.eot?#iefix') format('embedded-opentype'),
+          url('fonts/Quicksand_Book-webfont.woff') format('woff'),
+          url('fonts/Quicksand_Book-webfont.ttf') format('truetype'),
+          url('fonts/Quicksand_Book-webfont.svg#QuicksandBook') format('svg');
+        font-weight: normal;
+        font-style: normal;}
+            body{ background-image: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);}
+                .hone{font-family:QuicksandBook; font-size:50px; letter-spacing: 4px; text-align: center; color: cadetblue; text-shadow: 3px 3px 3px cadetblue;
+                      text-transform:uppercase; }
+                .wrapper{ border: 4px solid none; color:rgba(128, 128, 128, 0.863); text-align: center;
+                         height:50px;background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%); }
+                .firstb,.secondb,.thirdb,.fourthb{ font-family:QuicksandBook; font-size:20px; margin:4px; padding:5px; width:200px; text-transform: uppercase;}
+             .try{text-align: left; position:relative; top:10px; font-size:20px; font-weight:bold; color:black; width:700px; height:600px; left:400px;
+                            border: 2px solid none; overflow: scroll; padding:10px; margin:10px; border-radius: 5px; box-shadow: 10px 10px 10px rgb(83, 82, 82);
+                            background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);}
+                            ul{list-style-type: none;}
+                            .new{position:relative; top:10px; text-align: center;}
+                            .diff{text-align: center; text-transform:uppercase;}
+
+                            button{font-family:QuicksandBook; padding:7px; margin:10px; font-size:17px; letter-spacing: 1.5px;
+                                  color:black; border-radius: 5px;font-weight:bold; background-color: #E4E4E1;
+ background-image: radial-gradient(at top center, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.03) 100%), linear-gradient(to top, rgba(255,255,255,0.1) 0%, rgba(143,152,157,0.60) 100%);
+ 	background-blend-mode: normal, multiply;}
+                                button:hover{text-decoration: underline; color:darkgreen; font-size:20px;}
+                                button:focus{color:red;}
+                                  .firsta,.fas fa-arrow-circle-right{width:50px;}
+                                  .first1{font-family:QuicksandBook; text-transform: uppercase; font-size:16px;}
+                               li{list-style-type: upper-roman; }
+                               .none{font-size:25px;} 
+                               .mouse{text-align:center; font-size:50px; width:200px; margin:0 auto;}  
+         
+            </style>
+        </head>
+        <body>
+            <div class='container'>
+                <div>
+                <h1 class='hone' >Test your web developer skills</h1>
+                <div class='xxx'>
+                    <p class='mouse'><i class="fas fa-caret-square-down"></i></p></div>
+               </div>
+                   <div class='wrapper'>
+                   <button type='button' class='first1'>Press to start </button>
+                   <button type='button' class='firsta'><i class="fas fa-arrow-circle-right"></i></button>
+                   <button type='button' class='firstb'>Javascript<i class="fab fa-js"></i></button>
+                   <button type='button' class='secondb'>Html<i class="fab fa-html5"></i></button>
+                   <button type='button' class='thirdb'>jQuery<i class="fab fa-java"></i></button>
+                   <button type='button' class='fourthb'>CSS<i class="fab fa-css3-alt"></i></button>
+               </div>
+           
+            </div>
+            <div class='new'>
+                    <h1 class='none'> Quiz Score</h1>
+                </div>
+            <div class='try'>
+                <h1 class='diff'></h1>
+                <p class='one'></p>
+                <ul class='first'>
+                 <li class='one1'></li><br/>
+                <li class='one2'></li><br/>
+                <li class='one3'></li><br/>
+                <li class='one4'></li><br/>
+               </ul>
+                <p class='two'></p>
+                <ul>
+                        <li class='two1'></li><br/>
+                       <li class='two2'></li><br/>
+                       <li class='two3'></li><br/>
+                       <li class='two4'></li><br/>
+                      </ul>
+                <p class='three'></p>
+                <ul>
+                        <li class='three1'></li><br/>
+                       <li class='three2'></li><br/>
+                       <li class='three3'></li><br/>
+                       <li class='three4'></li><br/>
+                      </ul>
+                <p class='four'></p>
+                <ul>
+                        <li class='four1'></li><br/>
+                       <li class='four2'></li><br/>
+                       <li class='four3'></li><br/>
+                       <li class='four4'></li><br/>
+                      </ul>
+                <p class='five'></p>
+                <ul>
+                        <li class='five1'></li><br/>
+                       <li class='five2'></li><br/>
+                       <li class='five3'></li><br/>
+                       <li class='five4'></li><br/>
+                      </ul>
+                    </div>
+                      
+            <script>
+                $('.mouse').mouseover(function(){
+                    $('.wrapper').slideToggle('slow');
+                })
+             $(document).ready(function(){
+               let score=0;
+               $('.try').hide();
+               $('.none').hide();
+     
+                var htmlquestions = ['1. What are tags?','2. Which one is an element?','3. What is the difference between class and id attribute?',
+                                    '4. What tag to use to write caption for images?','5. How many types of lists are used in html?'];
+    
+                var cssquestions = ['1. Which from the following transforms all letters to uppercase?','2. What is the difference between margin and padding?',
+                                    '3. Which of the following are positons?','4. What is z-index?','5. Which is the correct shorthand for border?'];
+                
+                var javascriptquestions = ['1. What is closure?','2. What is local binding?','3. Which one from the following is an object?',
+                                            '4. What is global binding?','5. What does .append do?'];
+                
+                var jqueryquestions = ['1. What is jQuery?','2. Why is jQuery needed?','3. Which one is a method for effects?','4. Which sign is used as a shortcut for jQuery?',
+                                        '5. What is jQuery filter?'];
+
+                    $('.firstb').click(function(){
+
+                      $('.none').html('Your Score:0');
+                      $('.try').fadeIn('slow');
+                      $('.none').slideDown('slow');
+                            $('.diff').text('Javascript Quiz');
+                                $('.one').text(javascriptquestions[0]);
+                                $('.one1').html('<button>When outer function uses inner function variable</button>');
+                                $('.one2').html('<button class="off">When inner function uses outer function variable</button>');
+                                $('.one2').click(function(){
+                                   score1();
+                                    $('.off').prop("disabled",true);
+                                });
+                                //document.querySelector('.one2').addEventListener('click',score1);
+                                $('.none').show();
+                               
+                               
+                                $('.one3').html('<button>When the program does not execute</button>');
+                                $('.one4').html('<button>When there is an error</button>');
+                              
+                                $('.two').text(javascriptquestions[1]);
+                                $('.two1').html('<button>Local binding holds the arrays</button>');
+                                $('.two2').html('<button class="off1">Variable used to store the content in a function locally</button>');
+                                $('.two2').click(function(){
+                                   score1();
+                                    $('.off1').prop("disabled",true);
+                                });
+                                $('.two3').html('<button>Not important</button>');
+                                $('.two4').html('<button>Variable called when function is called</button>');
+    
+                                $('.three').text(javascriptquestions[2]);
+                                $('.three1').html('<button class="off2">let var={jim:};</button>');
+                                $('.three1').click(function(){
+                                   score1();
+                                    $('.off2').prop("disabled",true);
+                                });
+                                $('.three2').html('<button>let var=0</button>');
+                                $('.three3').html('<button>let var=[1,3,4]</button>');
+                                $('.three4').html('<button>let var=[]</button>');
+    
+                                $('.four').text(javascriptquestions[3]);
+                                $('.four1').html('<button class="off3">A variable that can be called by any function</button>');
+                                $('.four1').click(function(){
+                                   score1();
+                                    $('.off3').prop("disabled",true);
+                                });
+                                $('.four2').html('<button>A variable that can not be called by any function</button>');
+                                $('.four3').html('<button>A variable that has a fixed value</button>');
+                                $('.four4').html('<button>A variable that is inside a function</button>');
+    
+                                $('.five').text(javascriptquestions[4]); 
+                                $('.five1').html('<button>Add an item at the beginning</button>');
+                                $('.five2').html('<button class="off4">Add an item at the end</button>');
+                                $('.five2').click(function(){
+                                   score1();
+                                    $('.off4').prop("disabled",true);
+                                });
+                                $('.five3').html('<button>Add an item at the middle</button>');
+                                $('.five4').html('<button>Add an item where it feels like adding</button>');
+
+                    });
+                   
+   
+                    $('.secondb').click(function(){
+                        $('.none').html('Your Score:0');
+                      $('.try').fadeIn('slow');
+                      $('.none').slideDown('slow');
+
+                    $('.diff').text('Html Quiz');
+                    $('.one').text(htmlquestions[0]);
+                                $('.one1').html('<button>Tags are used to color in html</button>');
+                                $('.one2').html('<button>Tags are used to pick the color for the webpage</button>');
+                                $('.one3').html('<button class="off5">It is a hidden keyword to design your webpage</button>');
+                                $('.one3').click(function(){
+                                   score1();
+                                    $('.off5').prop("disabled",true);
+                                });
+                                $('.none').show();
+                                $('.one4').html('<button>Tags are not important</button>');
+
+                                $('.two').text(htmlquestions[1]);
+                                $('.two1').html('<button>font-family</button>');
+                                $('.two2').html('<button>text-transform</button>');
+                                $('.two3').html('<button class="off6"><+p+></button>');
+                                $('.two3').click(function(){
+                                   score1();
+                                    $('.off6').prop("disabled",true);
+                                });
+                                $('.two4').html('<button>letter-spacing</button>');
+    
+                                $('.three').text(htmlquestions[2]);
+                                $('.three1').html('<button>There is no difference</button>');
+                                $('.three2').html('<button class="off7">Class can be used more than once, where id has to be unique</button>');
+                                $('.three2').click(function(){
+                                   score1();
+                                    $('.off7').prop("disabled",true);
+                                });
+                                $('.three3').html('<button>Id attribute can be used more than once, while class is unique</button>');
+                                $('.three4').html('<button>They are both unique</button>');
+    
+                                $('.four').text(htmlquestions[3]);
+                                $('.four1').html('<button class="off8">figure,figcaption</button>');
+                                $('.four1').click(function(){
+                                   score1();
+                                    $('.off8').prop("disabled",true);
+                                });
+                                $('.four2').html('<button>figcaption, figure</button>');
+                                $('.four3').html('<button>figure</button>');
+                                $('.four4').html('<button>figcaption</button>');
+    
+                                $('.five').text(htmlquestions[4]); 
+                                $('.five1').html('<button class="off9">Three types of list: ul, ol and dt</button>');
+                                $('.five1').click(function(){
+                                   score1();
+                                    $('.off9').prop("disabled",true);
+                                });
+                                $('.five2').html('<button>Two types of list: ul, ol </button>');
+                                $('.five3').html('<button>One type of list: ul</button>');
+                                $('.five4').html('<button>There is no such thing as list</button>');
+                    });
+                    $('.thirdb').click(function(){
+                       $('.none').html('Your Score:0');
+                      $('.try').fadeIn('slow');
+                      $('.none').slideDown('slow');
+
+                        $('.diff').text('jQuery Quiz');
+                        $('.one').text(jqueryquestions[0]);
+                                $('.one1').html('<button class="off10">It is library function of javascript</button>');
+                                $('.one1').click(function(){
+                                   score1();
+                                    $('.off10').prop("disabled",true);
+                                });
+                                $('.none').show();
+                                $('.one2').html('<button>It is a newer version of javascript</button>');
+                                $('.one3').html('<button>It is a newer version of Java</button>');
+                                $('.one4').html('<button>Not important</button>');
+    
+                                $('.two').text(jqueryquestions[1]);
+                                $('.two1').html('<button>It is needed to debug program</button>');
+                                $('.two2').html('<button>It is not needed most of the time</button>');
+                                $('.two3').html('<button class="off11">It gives javascript shortcut functions, to save time</button>');
+                                $('.two3').click(function(){
+                                   score1();
+                                    $('.off11').prop("disabled",true);
+                                });
+                                $('.two4').html('<button>It is needed to create loops</button>');
+    
+                                $('.three').text(jqueryquestions[2]);
+                                $('.three1').html('<button class="off12">.slide</button>');
+                                $('.three1').click(function(){
+                                   score1();
+                                    $('.off12').prop("disabled",true);
+                                });
+                                $('.three2').html('<button>.slice</button>');
+                                $('.three3').html('<button>.prepend</button>');
+                                $('.three4').html('<button>.split</button>');
+    
+                                $('.four').text(jqueryquestions[3]);
+                                $('.four1').html('<button>*</button>');
+                                $('.four2').html('<button>&</button>');
+                                $('.four3').html('<button class="off13">$</button>');
+                                $('.four3').click(function(){
+                                   score1();
+                                    $('.off13').prop("disabled",true);
+                                });
+                                $('.four4').html('<button>@</button>');
+    
+                                $('.five').text(jqueryquestions[4]); 
+                                $('.five1').html('<button>It does not do anything</button>');
+                                $('.five2').html('<button class="off14">It select certain items from the list</button>');
+                                $('.five2').click(function(){
+                                   score1();
+                                    $('.off14').prop("disabled",true);
+                                });
+                                $('.five3').html('<button>It selects all the items</button>');
+                                $('.five4').html('<button>It deletes all the items</button>');
+       });
+    
+                      $('.fourthb').click(function(){
+                        $('.none').html('Your Score:0');
+                        $('.try').fadeIn('slow');
+                        $('.none').slideDown('slow');
+
+                        $('.diff').text('Css Quiz');
+                    $('.one').text(cssquestions[0]);
+                                $('.one1').html('<button>text-transform:capitalize</button>');
+                                $('.one2').html('<button class="off15">text-transform:uppercase</button>');
+                                $('.one2').click(function(){
+                                   score1();
+                                    $('.off15').prop("disabled",true);
+                                });
+                                $('.none').show();
+                                $('.one3').html('<button>text-transform:lowercase</button>');
+                                $('.one4').html('<button>text-decoration:underline</button>');
+    
+                                $('.two').text(cssquestions[1]);
+                                $('.two1').html('<button>They are both the same</button>');
+                                $('.two2').html('<button>Margin create space inside, while padding creates space outside</button>');
+                                $('.two3').html('<button class="off16">Margin create space outside the border, while padding create space inside the border</button>');
+                                $('.two3').click(function(){
+                                   score1();
+                                    $('.off16').prop("disabled",true);
+                                });
+                                $('.two4').html('<button>They are used to create text-shadow</button>');
+                               
+                                $('.three').text(cssquestions[2]);
+                                $('.three1').html('<button class="off17">relative</button>');
+                                $('.three1').click(function(){
+                                   score1();
+                                    $('.off17').prop("disabled",true);
+                                });
+                                $('.three2').html('<button>fantasy</button>');
+                                $('.three3').html('<button>cursive</button>');
+                                $('.three4').html('<button>display</button>');
+    
+                                $('.four').text(cssquestions[3]);
+                                $('.four1').html('<button class="off18">It is barometer for the importance of position</button>');
+                                $('.four1').click(function(){
+                                   score1();
+                                    $('.off18').prop("disabled",true);
+                                });
+                                $('.four2').html('<button>Creates a scroll bar</button>');
+                                $('.four3').html('<button>Hides element that overflow</button>');
+                                $('.four4').html('<button>A member of the font-family</button>');
+    
+                                $('.five').text(cssquestions[4]); 
+                                $('.five1').html('<button class="off19">border:width,style,color</button>');
+                                $('.five1').click(function(){
+                                   score1();
+                                    $('.off19').prop("disabled",true);
+                                });
+                                $('.five2').html('<button>border-width</button>');
+                                $('.five3').html('<button>border-style</button>');
+                                $('.five4').html('<button>border-color</button>');
+                        });
+                      function score1 ()
+                            {
+                            score++ ;
+                                    let var1=document.querySelector('.none');
+                                    var1.innerHTML=score;
+                                    if(score >= 5)
+                                    {
+                                        $('.try').fadeOut('slow');
+                                        score =0;
+                                        
+                                        $('.none').html('Good Job, You got 5/5. Now click another from the navbar');
+                                        
+                                      
+                                        setTimeout(function(){location.reload()},4000);
+                                    }
+                        }
+                    });   
+            </script>
+        </body>
+    </html>
